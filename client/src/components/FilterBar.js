@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-const FilterBar = (onFilter) => {
+const FilterBar = ({ onFilter }) => {
   const [min, setMin] = useState("");
   const [max, setMax] = useState("");
 
-  const onClick = (event) => {
+  const onFilterChange = (event) => {
     event.preventDefault();
     onFilter(min, max);
   };
@@ -36,10 +36,10 @@ const FilterBar = (onFilter) => {
           value={max}
           onChange={(event) => setMax(event.target.value)}
         />
-        <button className="btn-primary ml-2" onClick={() => onClick}>
-          Filter
-        </button>
       </div>
+      <button onClick={onFilterChange} className="ml-2 btn-primary">
+        Filter
+      </button>
     </div>
   );
 };

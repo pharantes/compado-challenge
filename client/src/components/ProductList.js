@@ -1,23 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import ProductItem from "./ProductItem";
 import FilterBar from "./FilterBar";
+import useFilter from "../hooks/useFilter";
 
 const ProductList = ({ products }) => {
-  const [filteredList, setFilteredList] = useState([]);
-
-  const onFilter = (min, max, products) => {
-    setFilteredList(
-      products.filter((product) => {
-        return (
-          product.sellingStatus[0].currentPrice[0].__value__ >= min &&
-          product.sellingStatus[0].currentPrice[0].__value__ <= max
-        );
-      })
-    );
-  };
   
-  const renderedList = filteredList.length
-    ? filteredList.map((product) => {
+  const filterData = {
+    min: "0",
+    max: "2000",
+    products: products,
+  };
+
+  const [filteredProducts, filter] = useFilter(filterData);
+
+  const renderedList = filteredProducts.length
+    ? filteredProducts.map((product) => {
         return <ProductItem key={product.itemId} product={product} />;
       })
     : products.map((product) => {
@@ -26,7 +23,7 @@ const ProductList = ({ products }) => {
 
   return (
     <div>
-      <FilterBar onFilter={onFilter} />
+      <FilterBar onFilter={filter} />
       <div>{renderedList}</div>
     </div>
   );
