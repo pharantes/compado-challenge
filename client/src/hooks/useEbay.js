@@ -8,9 +8,9 @@ const useEbay = (defaultSearchTerm) => {
     search(defaultSearchTerm);
   }, [defaultSearchTerm]);
 
-  const search = () => {
+  const search = (term) => {
     api
-      .getProducts()
+      .getProducts(term)
       .then((data) => setProducts(data.data))
       .catch((err) => setProducts({ message: err.toString() }));
   };
