@@ -2,18 +2,22 @@ import React from "react";
 import SearchBar from "./components/SearchBar";
 import ProductList from "./components/ProductList";
 import useEbay from "./hooks/useEbay";
+import "../node_modules/bootstrap/dist/js/bootstrap";
+import "./styles.scss";
 
 const App = () => {
   const [products, search] = useEbay("mac");
- 
+
   return (
-    <div className="">
-      <SearchBar onFormSubmit={search} />
-      <div className="">
-        <div className="">
-          <div className="">
-            <ProductList products={products} />
-          </div>
+    <div className="container">
+      <div className="row">
+        <div className="col">
+          <SearchBar onFormSubmit={search} />
+        </div>
+      </div>
+      <div className="row mb-2">
+        <div className="col">
+          <ProductList products={products} />
         </div>
       </div>
     </div>

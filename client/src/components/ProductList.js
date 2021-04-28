@@ -3,10 +3,11 @@ import ProductItem from "./ProductItem";
 
 const ProductList = ({ products }) => {
   const renderedList = products.map((product) => {
+    console.log(product);
     return <ProductItem key={product.itemId} product={product} />;
   });
 
-  return <div className="ui relaxed divided list">{renderedList}</div>;
+  return <div>{renderedList}</div>;
 };
 
 export default ProductList;

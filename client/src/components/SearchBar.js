@@ -8,18 +8,25 @@ const SearchBar = ({ onFormSubmit }) => {
 
     onFormSubmit(term);
   };
-
   return (
     <div className="">
-      <form onSubmit={onSubmit} className="">
-        <div className="">
-          <label>Product Search</label>
-          <input
-            type="text"
-            value={term}
-            onChange={(event) => setTerm(event.target.value)}
-          />
-        </div>
+      <form onSubmit={onSubmit} className="input-group mb-3">
+        <label
+          htmlFor="floatingInput"
+          className="input-group-text mr-2"
+          id="basic-addon1"
+        >
+          Product Search:
+        </label>
+        <input
+          type="text"
+          className="form-control"
+          placeholder="search something..."
+          aria-label="SearchInput"
+          aria-describedby="basic-addon1"
+          value={term}
+          onChange={(event) => setTerm(event.target.value)}
+        />
       </form>
     </div>
   );

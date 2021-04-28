@@ -2,14 +2,12 @@ import React from "react";
 
 const ProductItem = ({ product }) => {
   return (
-    <div className="">
-      {/* <img
-        alt={product.snippet.title}
-        className=""
-        src={product.snippet.thumbnails.medium.url}
-      /> */}
-      <div className="">
+    <div className="card my-2">
+      <div className="card-body">
         <div className="">{product.title}</div>
+        <div className="fw-bold">
+          Condintion: {product.condition[0].conditionDisplayName}
+        </div>
       </div>
     </div>
   );
