@@ -2,7 +2,6 @@ import React from "react";
 import SearchBar from "./components/SearchBar";
 import ProductList from "./components/ProductList";
 import useEbay from "./hooks/useEbay";
-import "../node_modules/bootstrap/dist/js/bootstrap";
 import "./styles.scss";
 
 const App = () => {
