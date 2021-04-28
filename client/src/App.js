@@ -6,7 +6,6 @@ import "./styles.scss";
 
 const App = () => {
   const [products, search] = useEbay("mac");
-
   return (
     <div className="container">
       <div className="row">

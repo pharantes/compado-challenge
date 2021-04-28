@@ -13,7 +13,9 @@ export default {
   service: service,
 
   async getProducts(term) {
-    const resp = await service.get("/ebay", { params: { query: term } });
+    const resp = await service.get("/ebay", {
+      params: { query: term },
+    });
     const data = await resp.data;
     return data;
   },

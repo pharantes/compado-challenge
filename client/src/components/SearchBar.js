@@ -1,20 +1,17 @@
 import React, { useState } from "react";
 
 const SearchBar = ({ onFormSubmit }) => {
-  const [term, setTerm] = useState("mac");
+  const [term, setTerm] = useState("");
 
   const onSubmit = (event) => {
     event.preventDefault();
     onFormSubmit(term);
   };
+
   return (
     <div className="">
       <form onSubmit={onSubmit} className="input-group mb-3">
-        <label
-          htmlFor="floatingInput"
-          className="input-group-text mr-2"
-          id="basic-addon1"
-        >
+        <label className="input-group-text mr-2" id="basic-addon1">
           Product Search:
         </label>
         <input
