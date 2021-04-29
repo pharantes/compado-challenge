@@ -9,11 +9,11 @@ Create a small javascript application that:Connects to the ebay product API.Gets
 
 ## Run the app locally
 
-1. ### `git clone https://github.com/pharantes/compado-challenge.git`
-2. ### `cd client` && `npm install`
-3. ### `cd server` && `npm install`
-4. ### `cd client` && `npm start`
-5. ### `cd server` && `npm start`
+1. #### `git clone https://github.com/pharantes/compado-challenge.git`
+2. #### `cd client` && `npm install`
+3. #### `cd server` && `npm install`
+4. #### `cd client` && `npm start`
+5. #### `cd server` && `npm start`
 
 ## Deployment on Heroku
 
@@ -33,4 +33,4 @@ This way we could improve speed and usability.
 
 ## Screenshot
 
-[](./'ebay.png')
+![screenshot](https://github.com/pharantes/compado-challenge/blob/master/ebay.png?raw=true)
