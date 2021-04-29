@@ -6,14 +6,22 @@
 body {
   margin: 0;
   padding: 18px 0;
-  a:hover {
-    text-decoration: none;
-  }
+
   .custom-button {
     height: 100%;
     width: auto;
     border: 2px solid rgb(114, 191, 0);
-    border-radius: 4px
+    border-radius: 4px;
+  }
+  .warning {
+    font-size: 12px;
+    color: rgb(242, 73, 54);
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  .card:hover {
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   .card {
     background-color: #fafafa;
@@ -33,7 +41,7 @@ body {
       color: rgb(245, 111, 96);
     }
     .location {
-        font-weight: normal;
+      font-weight: normal;
     }
     .price {
       padding: 8px 12px;

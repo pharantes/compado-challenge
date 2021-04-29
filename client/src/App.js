@@ -9,6 +9,14 @@ const App = () => {
 
   return (
     <div className="container">
+      <h3>Compado challenge - consume eBay Finding API</h3>
+      <h4>Frontend - React</h4>
+      <h4>Backend - Nodejs/Express</h4>
+      <hr
+        style={{
+          backgroundColor: "rgb(114, 191, 0)",
+        }}
+      />
       <div className="row">
         <div className="col">
           <SearchBar onFormSubmit={search} />

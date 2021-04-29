@@ -10,8 +10,8 @@ const FilterBar = ({ onFilter }) => {
   };
 
   return (
-    <div className="row justify-content-center m-0">
-      <div className="input-group mb-3">
+    <div className="row m-0">
+      <div className="input-group">
         <label className="input-group-text mr-2" id="basic-addon2">
           Min
         </label>
@@ -22,7 +22,12 @@ const FilterBar = ({ onFilter }) => {
           aria-label="MinPriceInput"
           aria-describedby="basic-addon2"
           value={min}
-          onChange={(event) => setMin(event.target.value)}
+          pattern="[0-9]*"
+          onChange={(event) =>
+            event.target.validity.valid
+              ? setMin(event.target.value)
+              : setMax("")
+          }
         />
         <label className="input-group-text mx-2" id="basic-addon3">
           Max
@@ -34,12 +39,18 @@ const FilterBar = ({ onFilter }) => {
           aria-label="MaxPriceInput"
           aria-describedby="basic-addon3"
           value={max}
-          onChange={(event) => setMax(event.target.value)}
+          pattern="[0-9]*"
+          onChange={(event) =>
+            event.target.validity.valid
+              ? setMax(event.target.value)
+              : setMax("")
+          }
         />
         <button onClick={onFilterChange} className="ml-2 custom-button">
           Filter
         </button>
       </div>
+      <span className="warning mb-3 ml-auto">* only numbers allowed</span>
     </div>
   );
 };
