@@ -9,6 +9,6 @@
     "dev:server": "cd server && npm run dev",
     "dev:client": "cd client && npm run start"
   },
-  "author": "",
+  "author": "Pedro Arantes",
   "license": "ISC"
 }
