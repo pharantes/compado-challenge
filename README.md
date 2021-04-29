@@ -7,7 +7,7 @@ The project was deployed on Heroku.com -> [Compado Challenge](https://compado-ch
 
 Create a small javascript application that:Connects to the ebay product API.Gets a list of products for a given keyword (or keywords) and allows the user to set a price range to filter products.Displays the results in a list.Make the list and search form as user friendly as possible.Provide styling using a CSS preprocessor. (SASS)Feel free to use existing third party components such as ReactTable or VueTableChoose an existing design upon which to base your application’s design, and explain why you choose this design
 
-## Run the app locally
+## Install & Start
 
 1. #### `git clone https://github.com/pharantes/compado-challenge.git`
 2. #### `cd client` && `npm install`
