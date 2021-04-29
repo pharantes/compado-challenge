@@ -14,6 +14,7 @@ const useEbay = (defaultSearchTerm) => {
       .then((data) => setProducts(data.data))
       .catch((err) => setProducts({ message: err.toString() }));
   };
+
   return [products, search];
 };
 export default useEbay;

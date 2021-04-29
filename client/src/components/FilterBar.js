@@ -10,7 +10,7 @@ const FilterBar = ({ onFilter }) => {
   };
 
   return (
-    <div className="">
+    <div className="row justify-content-center m-0">
       <div className="input-group mb-3">
         <label className="input-group-text mr-2" id="basic-addon2">
           Min
