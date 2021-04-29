@@ -36,10 +36,10 @@ const FilterBar = ({ onFilter }) => {
           value={max}
           onChange={(event) => setMax(event.target.value)}
         />
+        <button onClick={onFilterChange} className="ml-2 custom-button">
+          Filter
+        </button>
       </div>
-      <button onClick={onFilterChange} className="ml-2 btn-primary">
-        Filter
-      </button>
     </div>
   );
 };

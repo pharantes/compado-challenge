@@ -8,7 +8,8 @@ const ProductItem = ({ product }) => {
           <div className="title">{product.title}</div>
           <div className="condition">
             <span>Condintion: </span>
-            {product.condition[0].conditionDisplayName}
+            {(product.condition && product.condition[0].conditionDisplayName) ||
+              "N. D."}
           </div>
           <div className="location mb-2">
             <span>Location: </span>

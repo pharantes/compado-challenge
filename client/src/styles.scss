@@ -9,6 +9,12 @@ body {
   a:hover {
     text-decoration: none;
   }
+  .custom-button {
+    height: 100%;
+    width: auto;
+    border: 2px solid rgb(114, 191, 0);
+    border-radius: 4px
+  }
   .card {
     background-color: #fafafa;
     span,
